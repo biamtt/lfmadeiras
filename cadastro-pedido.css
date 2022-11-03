@@ -1,0 +1,39 @@
+#fundo {
+    width: 500px;
+    height: 500px;
+    background-image: url(imagens/LF.MADEIRAS.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    margin: auto;
+    display: block;
+}
+
+#pedidoCompra {
+    text-align: start;
+    display:flexbox;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    border: 2px;
+    position: relative;
+}
+
+.linha1 {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.coluna-50 {
+    width: 50%;
+}
+
+.linha2 {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.coluna-25 {
+    width: 25%;
+}
+
