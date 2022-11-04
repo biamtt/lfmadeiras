@@ -3,50 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="cadastro-pedido.css">
-    <title>LF Madeiras</title>
+    <title>Cadastro de Pedido</title>
 </head>
 <body>
-    <div id="fundo"></div>
-    <form id="pedidoCompra">
-        <fieldset style="border: double">
-            <legend><b>Pedido de Compra</b></legend>
-            <label for="nomeRepresentante">Representante:</label>
-            <input type="text" name="nomeRepresentante" placeholder="Nome do Representante" size="80">
-            <br>
-            <div class="linha1">
-                <div class="coluna-50">
-                    <label for="numeroPedido">Nº Pedido</label>
-                    <input type="text" name="numeroPedido" placeholder="DDMMAACLIENTE">
-                </div>
-                <div class="coluna-50">
-                    <label for="dataPedido">Data Pedido</label>
-                    <input type="datetime" name="dataPedido" placeholder="DD/MM/AAAA">
-                </div>
-            </div>
-                <fieldset>
-                <legend>Cliente</legend>
-                    <label for="clienteNovo">Cliente novo?</label>
-                    <input type="radio" name="clienteNovo" value="sim">Sim
-                    <input type="radio" name="clienteNovo" value="nao">Não
-                    <br>
-                    <label for="nomeCliente">Cliente:</label>
-                    <input type="text" name="nomeCliente" placeholder="Nome do Cliente" size="80">
-                    <br>
-                        <div class="linha2">
-                            <div class="coluna-50">
-                                <label for="enderecoEntrega">Endereço entrega:</label>
-                                <input type="text" name="enderecoEntrega" placeholder="Endereço" size="71">
-                            </div>
-                            <div class="coluna-25">
-                                <label for="cidadeEntrega">Cidade:</label>
-                                <input type="text" name="cidadeEntrega" placeholder="Cidade">
-                            </div>
-                            <div class="coluna-25">
-                                <label for="estadoEntrega">Estado:</label>
-                                <input type="text" size="2" placeholder="UF" list="UF">
-                                <datalist id="UF">
+    <header>
+        <div class="backg">
+            <h1><img src="imagens/logo.png"></h1>
+        </div>
+    </header>
+
+    <main>
+        <form id="pedidoCompra">
+            <fieldset style="border: double">
+                <legend><b>Pedido de Compra</b></legend>
+                
+                <label for="nomeRepresentante">Representante:</label>
+                <input type="text" name="nomeRepresentante" placeholder="Nome do Representante" size="80">
+
+                <br>
+
+                <label for="numeroPedido">Nº Pedido</label>
+                <input type="text" name="numeroPedido" placeholder="DDMMAACLIENTE">
+            
+                <label for="dataPedido">Data Pedido</label>
+                <input type="datetime" name="dataPedido" placeholder="DD/MM/AAAA">
+
+                <br>
+
+                <label for="nomeCliente">Cliente:</label>
+                <input type="text" name="nomeCliente" placeholder="Nome do Cliente" size="80">
+
+                <br>
+
+                <label for="enderecoEntrega">Endereço entrega:</label>
+                <input type="text" name="enderecoEntrega" placeholder="Endereço" size="71">
+
+                <label for="cidadeEntrega">Cidade:</label>
+                <input type="text" name="cidadeEntrega" placeholder="Cidade">
+
+                <label for="estadoEntrega">Estado:</label>
+                <input type="text" size="2" placeholder="UF" list="UF">
+                    <datalist id="UF">
                         <option value="">UF:</option>
                         <option value="AC">Acre</option>
                         <option value="AL">Alagoas</option>
@@ -75,23 +74,18 @@
                         <option value="SP">São Paulo</option>
                         <option value="SE">Sergipe</option>
                         <option value="TO">Tocantins</option>
-                                </datalist>
-                            </div>
-                        </div>
-                    <div class="linha1">
-                        <div class="coluna-50">
-                            <label for="telefoneCliente">Telefone Cliente:</label>
-                            <input type="tel" name="telefoneCliente" placeholder="(DDD) 99999-9999">
-                        </div>
-                        <div class="coluna-50">
-                            <label for="emailCliente">E-mail:</label>
-                            <input type="email" name="emailCliente" placeholder="cliente@gmail.com">
-                        </div>
-                    </div>
-                </fieldset>
-                <fieldset>
-                    <legend>Itens</legend>
-                        <table id="itensPedido" border="1">
+                    </datalist>
+
+                    <label for="telefoneCliente">Telefone Cliente:</label>
+                    <input type="tel" name="telefoneCliente" placeholder="(DDD) 99999-9999">
+
+                    <label for="emailCliente">E-mail:</label>
+                    <input type="email" name="emailCliente" placeholder="cliente@gmail.com">
+
+                    <br>
+
+                    <fieldset>
+                        <table id="itensPedido">
                             <thead>
                                 <tr>
                                     <th>Item</th>
@@ -111,11 +105,12 @@
                                     <td><input type="text" id="vlrTotalItem" placeholder="R$ 0,00" size="8"></td>
                                 </tr>
                             </tbody>
-
-
                         </table>
-                </fieldset>
-        </fieldset>
-    </form>
+                    </fieldset>
+                <input type="submit" value="Enviar Pedido">
+                <input type="submit" value="Imprimir Pedido"
+           </fieldset>
+        </form>
+    </main>   
 </body>
 </html>
